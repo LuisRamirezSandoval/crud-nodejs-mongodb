@@ -1,0 +1,16 @@
+<div class="card card-body p-4 rounded-8 bg-dark text-white">
+    <h3>Agregar Tarea</h3>
+    <form action="/tasks/add" method="post">
+        <div>
+            <label for="title">Titulo : </label>
+            {{!-- <input type="text" title="title" id="title" placeholder="titulo"> --}}
+            <textarea class="form-control rounded-8 bg-dark text-white" name="title" id="title" placeholder="Titulo"></textarea>
+        </div>
+
+        <div>
+            <label for="description">Descripcion:</label>
+            <textarea class="form-control rounded-8 bg-dark text-white" name="description" id="description" placeholder="Descripcion" cols="30" rows="10"></textarea>
+        </div>
+        <button class="btn btn-primary">Agregar</button>
+    </form>
+</div>

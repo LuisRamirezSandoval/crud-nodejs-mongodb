@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body p-4 rounded-8 bg-dark text-white">
+                <form action="/update/{{task._id}}" method="post">
+                <textarea class="form-control rounded-8 bg-dark text-white" name="title" id="title" placeholder="Titulo">{{task.title}}</textarea>
+                <textarea class="form-control rounded-8 bg-dark text-white" name="description" id="description" placeholder="descripcion" cols="30" rows="10">{{task.description}}</textarea>
+                <button class="btn btn-primary">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

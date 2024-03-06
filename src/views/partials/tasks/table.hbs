@@ -1,0 +1,32 @@
+{{#if Tasks}}
+<table class="table table-bordered table-hover table-dark">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each Tasks}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>
+                    {{#if done}}
+                        <a class="btn btn-secondary" href="/toggleDone/{{_id}}">Pendiente</a>
+                    {{else}}
+                        <a class="btn btn-success" href="/toggleDone/{{_id}}">Realizada</a>
+                    {{/if}}
+                    <a class="btn btn-danger" href="/delete/{{_id}}">Eliminar</a>
+                    <a class="btn btn-primary" href="/update/{{_id}}">Actualizar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="text-center">
+    <h1>Aun no has agregado tareas!!</h1>
+</div>
+{{/if}}
