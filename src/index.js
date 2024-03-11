@@ -1,5 +1,7 @@
 import app from './app'
 import './database'
 
-app.listen(3000);
+const PORT = 3000 || 4000;
+
+app.listen(PORT,"0.0.0.0");
 console.log("serve en puerto",3000);
